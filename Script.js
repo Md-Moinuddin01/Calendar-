@@ -26,7 +26,6 @@ const months = [
     "December"
 ];
 
-
 function renderCalendar() {
 
     calendarDays.innerHTML = "";
