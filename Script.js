@@ -36,6 +36,35 @@ function renderCalendar() {
         currentMonth,
         1
     ).getDay();
+
+    // Number of days in current month
+    const daysInMonth = new Date(
+        currentYear,
+        currentMonth + 1,
+        0
+    ).getDate();
+
+    // Number of days in previous month
+    const daysInPreviousMonth = new Date(
+        currentYear,
+        currentMonth,
+        0
+    ).getDate();
+
+    monthYear.textContent =
+        `${months[currentMonth]} ${currentYear}`;
+
+    // Previous month's dates
+    for (let i = firstDay - 1; i >= 0; i--) {
+
+        const day = document.createElement("div");
+
+        day.textContent =
+            daysInPreviousMonth - i;
+
+        day.classList.add("other-month");
+
+        calendarDays.appendChild(day);
     }
 
     // Current month's dates
@@ -133,6 +162,3 @@ nextMonth.addEventListener("click", () => {
 // Initialize
 renderCalendar();
 displayToday();
-
-
-    
