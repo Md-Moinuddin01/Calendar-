@@ -3,43 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real-Time Calendar</title>
+
+    <title>My Calendar</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    
-    <div class="calendar-container">
 
-        <div class="calendar-header">
-            <button id="prevMonth">&#10094;</button>
+    <div class="calendar">
 
-            <h1 id="monthYear"></h1>
+        <!-- Calendar Header -->
+        <div class="header">
+            <button id="previous">‹</button>
 
-            <button id="nextMonth">&#10095;</button>
+            <h2 id="monthYear">Loading...</h2>
+
+            <button id="next">›</button>
         </div>
 
+        <!-- Week Names -->
         <div class="weekdays">
-            <div>Sun</div>
-            <div>Mon</div>
-            <div>Tue</div>
-            <div>Wed</div>
-            <div>Thu</div>
-            <div>Fri</div>
-            <div>Sat</div>
+            <span>Sun</span>
+            <span>Mon</span>
+            <span>Tue</span>
+            <span>Wed</span>
+            <span>Thu</span>
+            <span>Fri</span>
+            <span>Sat</span>
         </div>
 
-        <div id="calendarDays" class="calendar-days"></div>
+        <!-- Calendar Dates -->
+        <div id="dates" class="dates"></div>
 
-        
-        <div class="today-info">
-            <span class="today-dot"></span>
-            <span id="todayText"></span>
+        <!-- Today's Date -->
+        <div class="today">
+            <span></span>
+            <p id="todayText">Today</p>
         </div>
 
     </div>
-    
+
     <script src="script.js"></script>
+
 </body>
 </html>
